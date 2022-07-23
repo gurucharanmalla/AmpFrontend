@@ -10,12 +10,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import { CheckoutComponent } from './Ticket/checkout/checkout.component';
 import { CartComponent } from './Ticket/cart/cart.component';
+import { AdminActivitiesComponent } from './Admin/Pages/admin-activities/admin-activities.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CheckoutComponent,
-    CartComponent
+    CartComponent,
+    AdminActivitiesComponent
   ],
   imports: [
     BrowserModule,
