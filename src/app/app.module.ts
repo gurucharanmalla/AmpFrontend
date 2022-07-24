@@ -27,6 +27,8 @@ import { SearchFilterPipe } from './pipe/search-filter.pipe';
 import { ActivityComponent } from './Ticket/activity/activity.component';
 import { LandingComponent } from './Home/landing/landing.component';
 import { RidesComponent } from './Home/rides/rides.component';
+import { LandingnavComponent } from './Home/landingnav/landingnav.component';
+import { LandingfooterComponent } from './Home/landingfooter/landingfooter.component';
 
 
 @NgModule({
@@ -40,9 +42,16 @@ import { RidesComponent } from './Home/rides/rides.component';
     ActivityComponent,
     LandingComponent,
     CustomerTicketComponent,
+<<<<<<< Updated upstream
     SearchFilterPipe,  
     RidesComponent
 
+=======
+    SearchFilterPipe,
+    RidesComponent,
+    LandingnavComponent,
+    LandingfooterComponent,
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,

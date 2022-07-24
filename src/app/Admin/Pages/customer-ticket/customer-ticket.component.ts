@@ -12,6 +12,11 @@ import { AdminTicket } from '../../tsFiles/adTicket';
   styleUrls: ['./customer-ticket.component.css']
 })
 export class CustomerTicketComponent implements OnInit {
+<<<<<<< Updated upstream
+=======
+
+  searchValue = ''
+>>>>>>> Stashed changes
   constructor(private api: AdServiceService) { }
   searchValue: number | undefined;
   
