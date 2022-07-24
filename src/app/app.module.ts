@@ -42,16 +42,13 @@ import { LandingfooterComponent } from './Home/landingfooter/landingfooter.compo
     ActivityComponent,
     LandingComponent,
     CustomerTicketComponent,
-<<<<<<< Updated upstream
     SearchFilterPipe,  
-    RidesComponent
+    RidesComponent,
 
-=======
     SearchFilterPipe,
     RidesComponent,
     LandingnavComponent,
     LandingfooterComponent,
->>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
