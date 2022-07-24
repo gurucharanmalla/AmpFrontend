@@ -20,6 +20,8 @@ import { AdTicketsComponent } from './Admin/Pages/ad-tickets/ad-tickets.componen
 import { SaveAdminComponent } from './Admin/Pages/save-admin/save-admin.component';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule} from '@angular/material/dialog';
+import { ActivityComponent } from './Ticket/activity/activity.component';
+import { LandingComponent } from './Home/landing/landing.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { MatDialogModule} from '@angular/material/dialog';
     CartComponent,
     AdminActivitiesComponent,
     AdTicketsComponent,
-    SaveAdminComponent
+    SaveAdminComponent,
+    ActivityComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
