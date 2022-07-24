@@ -1,18 +1,64 @@
-<body>
-    <nav class="navbar">
-        <div class="logo"><a href="https://t.me/rawnge" target="_blank" rel="noopener noreferrer"><span class="l-initial">H</span>ailand</a></div>
-        <div class="nav-link">
-          <ul>
-            <li>Home</li>
-            <li>Blogs</li>
-            <li>Articles</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
+<div>
+    <br><br>
+    <li style="float: right;  margin-right: 2%;"> <a href="login"> <span class="btn  btn-outline-light">Log Out</span></a></li>
+    <br><br>
+    
+</div>
+<ng-container *ngIf="tickets.length !=0">
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Book Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+        
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of tickets; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.name}}</td>
+                            <td style="width: 25%;">{{item.description}}</td>
+                            <th style="width: 12%;">{{item.price}}</th>
+                            <th style="width: 12%;">{{quantity}}
+                            </th>
+                            <th style="width: 12%;">{{item.price * quantity}}</th>
+                            <td>
+                                <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Remove</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"></td>
+                            <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
+                            <td><button (click)="shopNow()" class="btn btn-primary">Shop More</button></td>
+                            <td><button (click)="checkout()" class="btn btn-success">Checkout</button></td>
+                            <td><strong>Grand Total : {{grandTotal}}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="cta-btn">
-          <button class="btn s-btn">Login</button>
-          <button class="btn p-btn">Sign-Up</button>
+    </div>
+</ng-container>
+
+
+<ng-container *ngIf="tickets.length ==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Cart</h5>
         </div>
-      </nav>
-</body>
+        <div class="center">
+            <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+            <h4>Your cart is empty!</h4>
+            <h6>Add item to it now</h6>
+            <button  (click)="shopNow()" class="btn btn-primary">Shop Now</button>
+        </div>
+    </div>
+</ng-container>
+
