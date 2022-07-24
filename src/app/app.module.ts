@@ -26,6 +26,7 @@ import { CustomerTicketComponent } from './Admin/Pages/customer-ticket/customer-
 import { SearchFilterPipe } from './pipe/search-filter.pipe';
 import { ActivityComponent } from './Ticket/activity/activity.component';
 import { LandingComponent } from './Home/landing/landing.component';
+import { RidesComponent } from './Home/rides/rides.component';
 
 
 @NgModule({
@@ -39,7 +40,9 @@ import { LandingComponent } from './Home/landing/landing.component';
     ActivityComponent,
     LandingComponent,
     CustomerTicketComponent,
-    SearchFilterPipe  
+    SearchFilterPipe,  
+    RidesComponent
+
   ],
   imports: [
     BrowserModule,

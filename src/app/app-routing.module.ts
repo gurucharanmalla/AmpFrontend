@@ -5,6 +5,7 @@ import { AdminActivitiesComponent } from './Admin/Pages/admin-activities/admin-a
 import { CustomerTicketComponent } from './Admin/Pages/customer-ticket/customer-ticket.component';
 import { SaveAdminComponent } from './Admin/Pages/save-admin/save-admin.component';
 import { LandingComponent } from './Home/landing/landing.component';
+import { RidesComponent } from './Home/rides/rides.component';
 import { ActivityComponent } from './Ticket/activity/activity.component';
 
 const routes: Routes = [
@@ -15,6 +16,9 @@ const routes: Routes = [
   {path: 'activity', component: ActivityComponent},
 
   {path: '', component:LandingComponent},
+
+  {path: 'rides', component: RidesComponent},
+
 
 
 
