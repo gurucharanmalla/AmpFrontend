@@ -25,6 +25,10 @@ export class AdTicketsComponent implements OnInit {
   constructor(private formBuilder : FormBuilder ,private api: AdServiceService) { }
 
   ngOnInit(): void {
+
+   /* this.dataSource.filterPredicate = function (record,filter) {
+      return record.customer.customerID == filter ;
+    }*/
    
     this.getAllTickets();
    // this.getAct();

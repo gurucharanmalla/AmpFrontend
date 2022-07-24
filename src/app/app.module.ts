@@ -39,7 +39,7 @@ import { LandingComponent } from './Home/landing/landing.component';
     ActivityComponent,
     LandingComponent,
     CustomerTicketComponent,
-    SearchFilterPipe
+    SearchFilterPipe  
   ],
   imports: [
     BrowserModule,
