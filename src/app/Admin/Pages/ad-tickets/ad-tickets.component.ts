@@ -5,6 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { AdServiceService } from 'src/app/Service/Admin/ad-service.service';
+import { AdminTicket } from '../../tsFiles/adTicket';
 
 @Component({
   selector: 'app-ad-tickets',
@@ -13,9 +14,9 @@ import { AdServiceService } from 'src/app/Service/Admin/ad-service.service';
 })
 export class AdTicketsComponent implements OnInit {
 
-  getCutomerAct!: FormGroup;
+  
+  displayedColumns: string[] = ['customerId','date','ticketId','activityId','description', 'charges','action'];
 
-  displayedColumns: string[] = ['ticketId','activityId','description', 'charges','action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -24,16 +25,14 @@ export class AdTicketsComponent implements OnInit {
   constructor(private formBuilder : FormBuilder ,private api: AdServiceService) { }
 
   ngOnInit(): void {
-    this.getCutomerAct = this.formBuilder.group({
-      customerId : ['',Validators.required],
-    });
-    //this.getAllTickets();
+   
+    this.getAllTickets();
+   // this.getAct();
   }
 
-  getAct(){
-    if(this.getCutomerAct.valid)
-    {
-      this.api.getCutomerActivity(this.getCutomerAct.value).subscribe({
+  /*getAct(){
+   
+      this.api.getAllTickets().subscribe({
         next:(res)=>{
           console.log(res)
           alert("saving done successfully")
@@ -44,13 +43,13 @@ export class AdTicketsComponent implements OnInit {
           alert("Error")
         }
       })
-    }
-  }
+    
+  }*/
    
   
 
- /* getAllTickets(){
-    this.api.getCutomerActivity(customerId).subscribe({
+ getAllTickets(){
+    this.api.getAllTickets().subscribe({
       next:(res)=>{
         this.dataSource= new MatTableDataSource(res);
         this.dataSource.paginator = this.paginator;
@@ -60,7 +59,7 @@ export class AdTicketsComponent implements OnInit {
         alert("Error while fetching the Records!!")
       }
     })
-  }*/
+  }
 
 
   applyFilter(event: Event) {
@@ -73,3 +72,4 @@ export class AdTicketsComponent implements OnInit {
   }
 
 }
+ 

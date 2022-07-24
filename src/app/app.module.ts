@@ -20,6 +20,9 @@ import { AdTicketsComponent } from './Admin/Pages/ad-tickets/ad-tickets.componen
 import { SaveAdminComponent } from './Admin/Pages/save-admin/save-admin.component';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule} from '@angular/material/dialog';
+import {MatSortModule} from '@angular/material/sort';
+import { CustomerTicketComponent } from './Admin/Pages/customer-ticket/customer-ticket.component';
+import { SearchFilterPipe } from './pipe/search-filter.pipe';
 
 
 @NgModule({
@@ -29,7 +32,9 @@ import { MatDialogModule} from '@angular/material/dialog';
     CartComponent,
     AdminActivitiesComponent,
     AdTicketsComponent,
-    SaveAdminComponent
+    SaveAdminComponent,
+    CustomerTicketComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,9 @@ import { MatDialogModule} from '@angular/material/dialog';
     HttpClientModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSortModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
