@@ -9,6 +9,7 @@ export class CartserviceService {
   public cartItemList : any =[]
   public activityList = new BehaviorSubject<any>([]);
   public search = new BehaviorSubject<string>("");
+  public quantity : any;
   key:any
 
   constructor() { }
@@ -23,7 +24,7 @@ export class CartserviceService {
     this.cartItemList.push(...activity);
     this.activityList.next(activity);
   }
-  addtoCart(activity : any){
+  addtoCart(activity : any,){
 
         this.cartItemList.push(activity);
     this.activityList.next(this.cartItemList);
@@ -35,7 +36,7 @@ export class CartserviceService {
   getTotalPrice() : number{
     let grandTotal = 0;
     this.cartItemList.map((a:any)=>{
-      grandTotal += (a.price*2);
+      grandTotal += (a.charges*this.quantity);
     })
     return grandTotal;
   }

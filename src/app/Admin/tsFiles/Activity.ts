@@ -1,11 +1,11 @@
 export class Activity{
     activityId: number;
     description:string;
-    Charges : number;
+    charges : number;
 
-    constructor(activityId: number,description: string,Charges: number){
+    constructor(activityId: number,description: string,charges: number){
         this.activityId=activityId;
         this.description=description;
-        this.Charges=Charges;
+        this.charges=charges;
     }
 }

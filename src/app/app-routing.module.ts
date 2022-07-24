@@ -9,6 +9,7 @@ import { UpdateAdminComponent } from './Admin/Pages/update-admin/update-admin.co
 import { LandingComponent } from './Home/landing/landing.component';
 import { RidesComponent } from './Home/rides/rides.component';
 import { ActivityComponent } from './Ticket/activity/activity.component';
+import { CartComponent } from './Ticket/cart/cart.component';
 
 const routes: Routes = [
   {path: 'ad_act', component: AdminActivitiesComponent},
@@ -18,9 +19,15 @@ const routes: Routes = [
   {path: 'activity', component: ActivityComponent},
 
   {path: '', component:LandingComponent},
-
   {path: 'rides', component: RidesComponent},
+<<<<<<< Updated upstream
 {path: 'showTicket/:id', component: ShowTicketComponent}
+=======
+  
+  {path: 'cart', component: CartComponent},
+
+
+>>>>>>> Stashed changes
 
 
 

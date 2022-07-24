@@ -1,64 +1,55 @@
-<div>
-    <br><br>
-    <li style="float: right;  margin-right: 2%;"> <a href="login"> <span class="btn  btn-outline-light">Log Out</span></a></li>
-    <br><br>
-    
-</div>
-<ng-container *ngIf="tickets.length !=0">
-    <div class="container">
-        <div class="card-table">
-            <div class="cart-product">
-                <table class="table table-responsive">
-                    <thead>
-                        <tr>
-                            <th>Sr.No</th>
-                            <th>Book Name</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-        
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let item of tickets; let i = index">
-                            <td>{{i+1}}</td>
-                            <td>{{item.name}}</td>
-                            <td style="width: 25%;">{{item.description}}</td>
-                            <th style="width: 12%;">{{item.price}}</th>
-                            <th style="width: 12%;">{{quantity}}
-                            </th>
-                            <th style="width: 12%;">{{item.price * quantity}}</th>
-                            <td>
-                                <button (click)="removeItem(item)" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Remove</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="4"></td>
-                            <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
-                            <td><button (click)="shopNow()" class="btn btn-primary">Shop More</button></td>
-                            <td><button (click)="checkout()" class="btn btn-success">Checkout</button></td>
-                            <td><strong>Grand Total : {{grandTotal}}</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</ng-container>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <title>Calculate Total Items Price According To Quantity</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Package</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr >
+            <td class="item">{{activities[0].description}}</td>
+            <td class="quantity"><input type="number" name="quantity[0]" autocomplete="off" placeholder="Enter your Quantity" onkeyup="getPrice()"  [(ngModel)]="quantityone"></td>
+            <td class="price"><span>{{activities[0].charges}}</span> $</td>
+        </tr>
 
+        <tr >
+            <td class="item">{{activities[1].description}}</td>
+            <td class="quantity"><input type="number" name="quantity[1]" autocomplete="off" placeholder="Enter your Quantity" oninput="getPrice()" [(ngModel)]="quantitytwo"></td>
+            <td class="price"><span>{{activities[1].charges}}</span> $</td>
+        </tr>
 
-<ng-container *ngIf="tickets.length ==0">
-    <div class="container">
-        <div class="card">
-            <h5 class="card-title">My Cart</h5>
-        </div>
-        <div class="center">
-            <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
-            <h4>Your cart is empty!</h4>
-            <h6>Add item to it now</h6>
-            <button  (click)="shopNow()" class="btn btn-primary">Shop Now</button>
-        </div>
-    </div>
-</ng-container>
+        <tr >
+            <td class="item">{{activities[2].description}}</td>
+            <td class="quantity"><input type="number" name="quantity[2]" autocomplete="off" placeholder="Enter your Quantity"  onchange="getPrice()"  [(ngModel)]="quantitythree"></td>
+            <td class="price"><span>{{activities[2].charges}}</span> $</td>
+        </tr>
 
+        <tr >
+            <td class="item">{{activities[3].description}}</td>
+            <td class="quantity"><input type="number" name="quantity[3]" autocomplete="off" placeholder="Enter your Quantity" onforminput="getPrice()"  [(ngModel)]="quantityfour"></td>
+            <td class="price"><span>{{activities[3].charges}}</span> $</td>
+        </tr>
+
+        <tr >
+            <td class="item">{{activities[4].description}}</td>
+            <td class="quantity"><input type="number" name="quantity[4]" autocomplete="off" placeholder="Enter your Quantity" oninput="getPrice()"   [(ngModel)]="quantityfive"></td>
+            <td class="price"><span>{{activities[4].charges}}</span> $</td>
+        </tr>
+       
+        <tr>
+            <td class="total-text" colspan="2">Total Price</td>
+            <td class="total-number"><span class="number">{{grandTotal}}</span><span class="dollar-sign">$</span></td>
+        </tr>
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+ 
+</script>
+</body>
+</html>

@@ -23,6 +23,8 @@ import { AdTicketsComponent } from './Admin/Pages/ad-tickets/ad-tickets.componen
 import { SaveAdminComponent } from './Admin/Pages/save-admin/save-admin.component';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule} from '@angular/material/dialog';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 import {MatSortModule} from '@angular/material/sort';
 import { CustomerTicketComponent } from './Admin/Pages/customer-ticket/customer-ticket.component';
@@ -77,7 +79,9 @@ import { UpdateAdminComponent } from './Admin/Pages/update-admin/update-admin.co
     ReactiveFormsModule,
     MatDialogModule,
     MatSortModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
