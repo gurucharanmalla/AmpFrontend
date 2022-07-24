@@ -11,18 +11,27 @@ import {MatMenuModule} from '@angular/material/menu';
 import { CheckoutComponent } from './Ticket/checkout/checkout.component';
 import { CartComponent } from './Ticket/cart/cart.component';
 import { AdminActivitiesComponent } from './Admin/Pages/admin-activities/admin-activities.component';
+import { CreatecustomerComponent } from './Customer/createcustomer/createcustomer.component';
+import { CreatedetailsComponent } from './Customer/createdetails/createdetails.component';
+import { UpdatecustomerComponent } from './Customer/updatecustomer/updatecustomer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     CheckoutComponent,
     CartComponent,
-    AdminActivitiesComponent
+    AdminActivitiesComponent,
+    CreatecustomerComponent,
+    CreatedetailsComponent,
+    UpdatecustomerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,  
+    ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
