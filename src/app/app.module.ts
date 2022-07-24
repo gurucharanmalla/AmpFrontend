@@ -37,7 +37,9 @@ import { LandingComponent } from './Home/landing/landing.component';
     AdTicketsComponent,
     SaveAdminComponent,
     ActivityComponent,
-    LandingComponent
+    LandingComponent,
+    CustomerTicketComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
