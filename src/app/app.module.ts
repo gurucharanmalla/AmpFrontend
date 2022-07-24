@@ -11,13 +11,15 @@ import {MatMenuModule} from '@angular/material/menu';
 import { CheckoutComponent } from './Ticket/checkout/checkout.component';
 import { CartComponent } from './Ticket/cart/cart.component';
 import { AdminActivitiesComponent } from './Admin/Pages/admin-activities/admin-activities.component';
+import { HomeNavComponent } from './Home/home-nav/home-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CheckoutComponent,
     CartComponent,
-    AdminActivitiesComponent
+    AdminActivitiesComponent,
+    HomeNavComponent,
   ],
   imports: [
     BrowserModule,
