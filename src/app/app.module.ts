@@ -11,6 +11,9 @@ import {MatMenuModule} from '@angular/material/menu';
 import { CheckoutComponent } from './Ticket/checkout/checkout.component';
 import { CartComponent } from './Ticket/cart/cart.component';
 import { AdminActivitiesComponent } from './Admin/Pages/admin-activities/admin-activities.component';
+import { CreatecustomerComponent } from './Customer/createcustomer/createcustomer.component';
+import { CreatedetailsComponent } from './Customer/createdetails/createdetails.component';
+import { UpdatecustomerComponent } from './Customer/updatecustomer/updatecustomer.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatFormFieldModule } from '@angular/material/form-field';
@@ -26,7 +29,12 @@ import { CustomerTicketComponent } from './Admin/Pages/customer-ticket/customer-
 import { ActivityComponent } from './Ticket/activity/activity.component';
 import { LandingComponent } from './Home/landing/landing.component';
 import { RidesComponent } from './Home/rides/rides.component';
+
 import { ShowTicketComponent } from './Admin/Pages/show-ticket/show-ticket.component';
+
+import { LandingnavComponent } from './Home/landingnav/landingnav.component';
+import { LandingfooterComponent } from './Home/landingfooter/landingfooter.component';
+
 
 
 @NgModule({
@@ -35,18 +43,26 @@ import { ShowTicketComponent } from './Admin/Pages/show-ticket/show-ticket.compo
     CheckoutComponent,
     CartComponent,
     AdminActivitiesComponent,
+    CreatecustomerComponent,
+    CreatedetailsComponent,
+    UpdatecustomerComponent,
     AdTicketsComponent,
     SaveAdminComponent,
     ActivityComponent,
     LandingComponent,
-    CustomerTicketComponent, 
-    RidesComponent, ShowTicketComponent
 
+    CustomerTicketComponent, 
+    RidesComponent, ShowTicketComponent,
+
+    LandingnavComponent,
+    LandingfooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,  
+    ReactiveFormsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,

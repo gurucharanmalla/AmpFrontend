@@ -13,7 +13,7 @@ import { AdminTicket } from '../../tsFiles/adTicket';
   styleUrls: ['./customer-ticket.component.css']
 })
 export class CustomerTicketComponent implements OnInit {
- 
+
   displayedColumns: string[] = ['ticketId','username','action'];
 
   dataSource!: MatTableDataSource<any>;
@@ -34,20 +34,15 @@ export class CustomerTicketComponent implements OnInit {
   }
 
   /*getAct(){
-   
-      this.api.getAllTickets().subscribe({
-        next:(res)=>{
-          console.log(res)
-          alert("saving done successfully")
-         
-         
-        },
-        error:()=>{
-          alert("Error")
-        }
-      })
-    
-  }*/
+
+
+  constructor(private api: AdServiceService) { }
+  searchValue: number | undefined;
+  
+    ngOnInit(): void {
+      this.getAllTickets();
+    }
+*/
    
   
 

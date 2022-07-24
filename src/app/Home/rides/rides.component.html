@@ -1,0 +1,141 @@
+<app-landingnav></app-landingnav>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  box-shadow: none;
+  
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 20px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-left: 120%;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<div style="text-align:center">
+  <h1>Available Rides</h1>
+</div>
+
+<!-- The four columns -->
+<div class="row ">
+  <div class="column">
+    <img src="https://res.cloudinary.com/simplotel/image/upload/x_93,y_99,w_2590,h_1941,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/wonderla-amusement-parks-resort/Flash_Tower_aruwe1" alt="Nature" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://res.cloudinary.com/simplotel/image/upload/x_204,y_0,w_1736,h_1303,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/wonderla-bengaluru/Bengaluru_Recoil" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://res.cloudinary.com/simplotel/image/upload/x_0,y_0,w_3536,h_2653,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/wonderla-bengaluru/EQUINOX_at_Bengaluru_Park_webz5x" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://res.cloudinary.com/simplotel/image/upload/x_0,y_0,w_1484,h_1114,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/bengaluru-park/Insanity_x6h66s" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="row ">
+    <div class="column">
+      <img src="https://res.cloudinary.com/simplotel/image/upload/x_78,y_0,w_1715,h_1288,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/bengaluru-park/Hurricane_vc8ckh" alt="Nature" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="https://res.cloudinary.com/simplotel/image/upload/x_840,y_0,w_4161,h_3117,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/bengaluru-park/Y_Scream_jcjthp" alt="Snow" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="https://res.cloudinary.com/simplotel/image/upload/x_1059,y_0,w_3384,h_2536,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/wonderla-bengaluru/TECHNO_JUMP__at_Bengaluru_Park_cgtlix" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img src="https://res.cloudinary.com/simplotel/image/upload/x_353,y_0,w_4376,h_3278,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/bengaluru-park/Maverick_echj0q" alt="Lights" style="width:100%" onclick="myFunction(this);">
+    </div>
+  </div>
+
+  <div class="row ">
+    <div class="column">
+      <img src="https://res.cloudinary.com/simplotel/image/upload/x_74,y_0,w_1688,h_1267,r_0,c_crop/q_80,w_533,dpr_1,f_auto,fl_progressive,c_limit/bengaluru-park/Crazy_Wagon_gghisd" alt="Nature" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="https://res.cloudinary.com/simplotel/image/upload/x_66,y_0,w_1066,h_800,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/wonderla-bengaluru/Cine_Magic_At_Bengaluru_Park__bznitm" alt="Nature" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="https://res.cloudinary.com/simplotel/image/upload/x_66,y_0,w_1066,h_800,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/wonderla-bengaluru/Cine_Magic_At_Bengaluru_Park__bznitm" alt="Nature" style="width:100%" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="https://res.cloudinary.com/simplotel/image/upload/x_0,y_0,w_1398,h_1050,r_0,c_crop/q_80,w_1600,dpr_1,f_auto,fl_progressive,c_limit/wonderla-bengaluru/MINI_PIRATE_SHIP_drjbhz" alt="Nature" style="width:100%" onclick="myFunction(this);">
+    </div>
+  </div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+<app-landingfooter></app-landingfooter>
+</body>
+</html>
