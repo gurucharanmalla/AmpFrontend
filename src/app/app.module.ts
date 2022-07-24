@@ -23,10 +23,10 @@ import { MatDialogModule} from '@angular/material/dialog';
 
 import {MatSortModule} from '@angular/material/sort';
 import { CustomerTicketComponent } from './Admin/Pages/customer-ticket/customer-ticket.component';
-import { SearchFilterPipe } from './pipe/search-filter.pipe';
 import { ActivityComponent } from './Ticket/activity/activity.component';
 import { LandingComponent } from './Home/landing/landing.component';
 import { RidesComponent } from './Home/rides/rides.component';
+import { ShowTicketComponent } from './Admin/Pages/show-ticket/show-ticket.component';
 
 
 @NgModule({
@@ -39,9 +39,8 @@ import { RidesComponent } from './Home/rides/rides.component';
     SaveAdminComponent,
     ActivityComponent,
     LandingComponent,
-    CustomerTicketComponent,
-    SearchFilterPipe,  
-    RidesComponent
+    CustomerTicketComponent, 
+    RidesComponent, ShowTicketComponent
 
   ],
   imports: [

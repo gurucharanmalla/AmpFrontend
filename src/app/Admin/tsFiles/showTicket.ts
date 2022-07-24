@@ -1,18 +1,18 @@
-export class AdminTicket{
+export class showTicket{
     ticketId:number;
-    date:Date;
+
     customerID: number;
     activityId: number;
     description:string;
     Charges : number;
 
 
-    constructor( customerID: number, date:Date,ticketId:number,activityId: number,description: string,Charges: number){
+    constructor( customerID: number,ticketId:number,activityId: number,description: string,Charges: number){
         this.activityId=activityId;
         this.description=description;
         this.Charges=Charges;
         this.customerID=customerID;
-        this.date=date;
+    
         this.ticketId=ticketId;
     }
 }

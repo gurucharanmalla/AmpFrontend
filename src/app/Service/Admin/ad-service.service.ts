@@ -3,6 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Activity } from 'src/app/Admin/tsFiles/Activity';
 import { AdminTicket } from 'src/app/Admin/tsFiles/adTicket';
+import { showTicket } from 'src/app/Admin/tsFiles/showTicket';
 
 @Injectable({
   providedIn: 'root'
@@ -32,10 +33,13 @@ saveAdmin(data: any){
 }
 */
 
-getCutomerActivity(id:number):Observable<AdminTicket>{
+getCutomerActivity(id:number):Observable<showTicket>{
 
-  return this.http.get<AdminTicket>('http://localhost:8091/appadmin/allcus?customerId='+id)
+  return this.http.get<showTicket>('http://localhost:8091/appadmin/allcus?customerId='+id)
 }
+
+
+
 
 getAllTickets(){
   return this.http.get<AdminTicket[]>("http://localhost:8091/appadmin/adAllTicket");

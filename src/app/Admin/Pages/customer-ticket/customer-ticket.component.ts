@@ -3,6 +3,7 @@ import { FormBuilder } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { AdServiceService } from 'src/app/Service/Admin/ad-service.service';
 import { AdminTicket } from '../../tsFiles/adTicket';
 
@@ -12,68 +13,72 @@ import { AdminTicket } from '../../tsFiles/adTicket';
   styleUrls: ['./customer-ticket.component.css']
 })
 export class CustomerTicketComponent implements OnInit {
-  constructor(private api: AdServiceService) { }
-  searchValue: number | undefined;
-  
-    ngOnInit(): void {
-      this.getAllTickets();
-    }
-  
-    getAllTickets(){
+ 
+  displayedColumns: string[] = ['ticketId','username','action'];
+
+  dataSource!: MatTableDataSource<any>;
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
+
+  constructor(private formBuilder : FormBuilder ,private api: AdServiceService,private router: Router) { }
+
+  ngOnInit(): void {
+
+   /* this.dataSource.filterPredicate = function (record,filter) {
+      return record.customer.customerID == filter ;
+    }*/
+   
+    this.getAllTickets();
+   // this.getAct();
+  }
+
+  /*getAct(){
+   
       this.api.getAllTickets().subscribe({
         next:(res)=>{
           console.log(res)
-          this.dataSource= new MatTableDataSource(res);
-          this.dataSource.paginator = this.paginator;
-          this.dataSource.sort = this.sort
+          alert("saving done successfully")
+         
+         
         },
-        error:(err)=>{
-          alert("Error while fetching the Records!!")
+        error:()=>{
+          alert("Error")
         }
       })
-    }
-  
-    columns = [
-      {
-        columnDef: 'ticketId',
-        header: 'Ticket',
-        cell: (element: AdminTicket) => `${element.ticketId}`,
-      },
-      {
-        columnDef: 'date',
-        header: 'Date',
-        cell: (element: AdminTicket) => `${element.date}`,
-      },
-      {
-        columnDef: 'customerID',
-        header: 'Customer',
-        cell: (element: AdminTicket) => `${element.customer.customerID}`,
-      },
-      {
-        columnDef: 'activityId',
-        header: 'ActivityId',
-        cell: (element: AdminTicket) => `${element.activity.activityId}`,
-      },
-      {
-        columnDef: 'description',
-        header: 'Activity',
-        cell: (element: AdminTicket) => `${element.activity.description}`,
-      },
-      {
-        columnDef: 'Charges',
-        header: 'Price',
-        cell: (element: AdminTicket) => `${element.activity.charges}`,
-      },
-    ];
-      dataSource !: MatTableDataSource<any>;
-    displayedColumns = this.columns.map(c => c.columnDef);
-  
-  
     
-    @ViewChild(MatPaginator) paginator!: MatPaginator;
-    @ViewChild(MatSort) sort!: MatSort;
+  }*/
+   
   
-  
-  
+
+ getAllTickets(){
+    this.api.getAllTickets().subscribe({
+      next:(res)=>{
+        this.dataSource= new MatTableDataSource(res);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort
+      },
+      error:(err)=>{
+        alert("Error while fetching the Records!!")
+      }
+    })
   }
+
   
+  viewTicket(id:number):void{
+
+    this.router.navigate(['showTicket', id]);
+ }
+
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
+
+}
+ 
