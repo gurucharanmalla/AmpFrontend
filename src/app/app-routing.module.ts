@@ -20,14 +20,11 @@ const routes: Routes = [
 
   {path: '', component:LandingComponent},
   {path: 'rides', component: RidesComponent},
-<<<<<<< Updated upstream
-{path: 'showTicket/:id', component: ShowTicketComponent}
-=======
+{path: 'showTicket/:id', component: ShowTicketComponent},
   
   {path: 'cart', component: CartComponent},
 
 
->>>>>>> Stashed changes
 
 
 

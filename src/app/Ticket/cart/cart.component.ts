@@ -67,7 +67,10 @@ export class CartComponent implements OnInit {
       this.activities[3].charges * this.quantityfour+
       this.activities[4].charges * this.quantityfive;
 
+      console.log(this.grandTotal)
       return this.grandTotal;
 }
+
+
 
 }
