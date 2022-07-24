@@ -1,0 +1,47 @@
+<h1 mat-dialog-title>Provide Details</h1>
+<div mat-dialog-content>
+    <form [formGroup]="savingAdmin">
+     <mat-form-field appearance="outline">
+         <mat-label>Username</mat-label>
+         <input  formControlName="username" minlength="3" maxlength="20" matInput placeholder="">
+         
+         <mat-icon matSuffix>person</mat-icon>
+       </mat-form-field>
+
+       <mat-form-field appearance="outline">
+        <mat-label>password</mat-label>
+        <input  formControlName="password" minlength="5" maxlength="10" matInput placeholder="">
+        
+        <mat-icon matSuffix> portable_wifi_off</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>city</mat-label>
+        <input  formControlName="address" minlength="3" maxlength="20" matInput placeholder="">
+        
+        <mat-icon matSuffix>home</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>mobile number</mat-label>
+        <input  formControlName="mobileNumber" minlength="3" maxlength="10" matInput placeholder="">
+        
+        <mat-icon matSuffix>dialpad</mat-icon>
+      </mat-form-field>
+       
+       
+       
+      <mat-form-field appearance="outline">
+        <mat-label>email</mat-label>
+        <input  formControlName="email"  matInput placeholder="">
+        <mat-icon matSuffix>email</mat-icon>
+      </mat-form-field>
+         
+      
+    </form>
+ </div>
+
+ <div mat-dialog-action [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button mat-raised-button color="primary" (click)="saveAdminData()" >Confirm</button>
+</div>

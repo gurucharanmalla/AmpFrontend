@@ -3,16 +3,15 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { SaveAdminComponent } from 'src/app/Admin/Pages/save-admin/save-admin.component';
 import { AdServiceService } from 'src/app/Service/Admin/ad-service.service';
-import { SaveAdminComponent } from '../save-admin/save-admin.component';
 
 @Component({
-  selector: 'app-admin-activities',
-  templateUrl: './admin-activities.component.html',
-  styleUrls: ['./admin-activities.component.css']
+  selector: 'app-activity',
+  templateUrl: './activity.component.html',
+  styleUrls: ['./activity.component.css']
 })
-export class AdminActivitiesComponent implements OnInit {
-
+export class ActivityComponent implements OnInit {
   displayedColumns: string[] = ['activityId','description', 'charges','action'];
   dataSource!: MatTableDataSource<any>;
 
@@ -58,4 +57,10 @@ export class AdminActivitiesComponent implements OnInit {
     
     })
     }
+
+
+    Book(){
+      
     }
+
+}
