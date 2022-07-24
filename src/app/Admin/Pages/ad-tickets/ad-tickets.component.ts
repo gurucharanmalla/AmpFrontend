@@ -15,7 +15,7 @@ import { AdminTicket } from '../../tsFiles/adTicket';
 export class AdTicketsComponent implements OnInit {
 
   
-  displayedColumns: string[] = ['customerId','date','ticketId','activityId','description', 'charges','action'];
+  displayedColumns: string[] = ['customerId','date','ticketId','username','activityId','description', 'charges'];
 
   dataSource!: MatTableDataSource<any>;
 
@@ -26,35 +26,17 @@ export class AdTicketsComponent implements OnInit {
 
   ngOnInit(): void {
 
-   /* this.dataSource.filterPredicate = function (record,filter) {
-      return record.customer.customerID == filter ;
-    }*/
-   
     this.getAllTickets();
-   // this.getAct();
   }
 
-  /*getAct(){
-   
-      this.api.getAllTickets().subscribe({
-        next:(res)=>{
-          console.log(res)
-          alert("saving done successfully")
-         
-         
-        },
-        error:()=>{
-          alert("Error")
-        }
-      })
-    
-  }*/
+
    
   
 
  getAllTickets(){
     this.api.getAllTickets().subscribe({
       next:(res)=>{
+        console.log(res);
         this.dataSource= new MatTableDataSource(res);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort

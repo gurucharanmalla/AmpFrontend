@@ -5,6 +5,7 @@ import { AdminActivitiesComponent } from './Admin/Pages/admin-activities/admin-a
 import { CustomerTicketComponent } from './Admin/Pages/customer-ticket/customer-ticket.component';
 import { SaveAdminComponent } from './Admin/Pages/save-admin/save-admin.component';
 import { ShowTicketComponent } from './Admin/Pages/show-ticket/show-ticket.component';
+import { UpdateAdminComponent } from './Admin/Pages/update-admin/update-admin.component';
 import { LandingComponent } from './Home/landing/landing.component';
 import { RidesComponent } from './Home/rides/rides.component';
 import { ActivityComponent } from './Ticket/activity/activity.component';
@@ -13,7 +14,7 @@ const routes: Routes = [
   {path: 'ad_act', component: AdminActivitiesComponent},
 {path: 'customerTicket',component: CustomerTicketComponent},
   {path: 'adCusAct', component: AdTicketsComponent},
-
+{path: 'updateAdmin',component:UpdateAdminComponent},
   {path: 'activity', component: ActivityComponent},
 
   {path: '', component:LandingComponent},

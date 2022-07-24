@@ -1,16 +1,21 @@
 <h1 mat-dialog-title>Provide Details</h1>
 <div mat-dialog-content>
     <table>
-        <tr> <label> <b>Customer Id :</b></label> {{ticket.customer.customerId}} </tr>
+        <div class="form-group">
+            <label> Course Name</label>
+            <input type="number" class ="form-control" id = "customerID"
+                [(ngModel)] = "ticket.customerID" name = "customerID">
+        </div>
+        <tr> <label> <b>Customer Id :</b></label> {{ticket.customerID}} </tr>
         <tr><label> <b>Ticket Id :</b></label> {{ticket.ticketId}}</tr>
-        <tr><label> <b> Activirt Id :</b></label> {{ticket.activity.activityId}}</tr>
-        <tr> <label> <b>Avtivity :</b></label> {{ticket.activity.description}} </tr>
-        <tr><label> <b>Price :</b></label> {{ticket.activity.charges}}</tr>
+        <tr><label> <b> Activirt Id :</b></label> {{ticket.activityId}}</tr>
+        <tr> <label> <b>Avtivity :</b></label> {{ticket.description}} </tr>
+        <tr><label> <b>Price :</b></label> {{ticket.Charges}}</tr>
        
     </table>
  </div>
 
  <div mat-dialog-action [align]="'end'">
-    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button mat-raised-button color="warn" mat-dialog-close >Close</button>
     <button mat-raised-button color="primary" >Confirm</button>
 </div>

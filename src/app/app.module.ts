@@ -34,6 +34,7 @@ import { ShowTicketComponent } from './Admin/Pages/show-ticket/show-ticket.compo
 
 import { LandingnavComponent } from './Home/landingnav/landingnav.component';
 import { LandingfooterComponent } from './Home/landingfooter/landingfooter.component';
+import { UpdateAdminComponent } from './Admin/Pages/update-admin/update-admin.component';
 
 
 
@@ -56,6 +57,7 @@ import { LandingfooterComponent } from './Home/landingfooter/landingfooter.compo
 
     LandingnavComponent,
     LandingfooterComponent,
+    UpdateAdminComponent,
   ],
   imports: [
     BrowserModule,

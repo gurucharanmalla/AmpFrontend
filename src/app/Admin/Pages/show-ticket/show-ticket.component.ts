@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AdServiceService } from 'src/app/Service/Admin/ad-service.service';
+import { Ticket } from 'src/app/Ticket/tsfiles/ticket';
 import { AdminTicket } from '../../tsFiles/adTicket';
 import { showTicket } from '../../tsFiles/showTicket';
 
@@ -12,15 +13,14 @@ import { showTicket } from '../../tsFiles/showTicket';
 export class ShowTicketComponent implements OnInit {
 
   id:number=0
-  ticket:any
+  ticket:showTicket = new showTicket();
+  
 
   constructor(private route: ActivatedRoute, private api: AdServiceService) { }
 
   ngOnInit(): void {
 
     this.id = this.route.snapshot.params['id'];
-
-    this.ticket = new showTicket(0,0,0,'',0);
     this.api.getCutomerActivity(this.id).subscribe( data => {
       console.log(data);
       this.ticket = data;

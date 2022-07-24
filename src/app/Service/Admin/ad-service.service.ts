@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Activity } from 'src/app/Admin/tsFiles/Activity';
 import { AdminTicket } from 'src/app/Admin/tsFiles/adTicket';
 import { showTicket } from 'src/app/Admin/tsFiles/showTicket';
+import { Admin } from 'src/app/Admin/tsFiles/Admin';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,8 @@ import { showTicket } from 'src/app/Admin/tsFiles/showTicket';
 export class AdServiceService {
 
   constructor(private http: HttpClient) { }
+
+  private baseUrl='http://localhost:8091/appadmin';
 
 getActivities(){
   return this.http.get<Activity[]>("http://localhost:8091/appadmin/actall");
@@ -45,6 +48,13 @@ getAllTickets(){
   return this.http.get<AdminTicket[]>("http://localhost:8091/appadmin/adAllTicket");
 }
 
+getAdminById(id: number): Observable<Admin>{
+  return this.http.get<Admin>(`${this.baseUrl}/view/${id}`);
+}
+
+updateAdmin(admin:Admin): Observable<Object> {  
+  return this.http.post(`${this.baseUrl}/adAdmin`, admin);  
+}
 
 
 }
