@@ -11,13 +11,25 @@ import {MatMenuModule} from '@angular/material/menu';
 import { CheckoutComponent } from './Ticket/checkout/checkout.component';
 import { CartComponent } from './Ticket/cart/cart.component';
 import { AdminActivitiesComponent } from './Admin/Pages/admin-activities/admin-activities.component';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatFormFieldModule } from '@angular/material/form-field';
+import { HttpClientModule } from '@angular/common/http';
+import {MatInputModule} from '@angular/material/input';
+import { AdTicketsComponent } from './Admin/Pages/ad-tickets/ad-tickets.component';
+import { SaveAdminComponent } from './Admin/Pages/save-admin/save-admin.component';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CheckoutComponent,
     CartComponent,
-    AdminActivitiesComponent
+    AdminActivitiesComponent,
+    AdTicketsComponent,
+    SaveAdminComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +38,14 @@ import { AdminActivitiesComponent } from './Admin/Pages/admin-activities/admin-a
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    HttpClientModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
