@@ -20,9 +20,12 @@ import { AdTicketsComponent } from './Admin/Pages/ad-tickets/ad-tickets.componen
 import { SaveAdminComponent } from './Admin/Pages/save-admin/save-admin.component';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule} from '@angular/material/dialog';
+
 import {MatSortModule} from '@angular/material/sort';
 import { CustomerTicketComponent } from './Admin/Pages/customer-ticket/customer-ticket.component';
 import { SearchFilterPipe } from './pipe/search-filter.pipe';
+import { ActivityComponent } from './Ticket/activity/activity.component';
+import { LandingComponent } from './Home/landing/landing.component';
 
 
 @NgModule({
@@ -33,8 +36,8 @@ import { SearchFilterPipe } from './pipe/search-filter.pipe';
     AdminActivitiesComponent,
     AdTicketsComponent,
     SaveAdminComponent,
-    CustomerTicketComponent,
-    SearchFilterPipe
+    ActivityComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
