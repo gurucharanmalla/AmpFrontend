@@ -1,0 +1,14 @@
+
+<form #e="ngForm" (ngSubmit)="onSubmit()" (ngSubmit)="onSignUp()" class="container" >
+   
+     <div class="form-group">  
+        <label for="name">Username</label>  
+        <input type="text" class="form-control"  formControlName="username" [(ngModel)]="username"  >  
+    </div>
+    <div class="form-group">  
+        <label for="name">Password</label>  
+        <input type="number" class="form-control"  formControlName="customerId" [(ngModel)]="password"  >  
+    </div>
+    <button class="btn btn-success" type="submit">Login</button>
+    <button class="btn btn-success" type="submit">SignUp</button>
+ </form>
